@@ -1,3 +1,5 @@
+let data;
+
 window.addEventListener( 'load', function () {
     let xhr = new XMLHttpRequest()
 
@@ -32,7 +34,7 @@ function randomNumbersInArray() {
 }
 
 function selectFirstThreeAlbums() {
-    let data = JSON.parse( this.responseText )
+    data = JSON.parse( this.responseText )
     let albumArray = randomNumbersInArray()
     for ( let i = 0; i < albumArray.length; i++ ) {
         addCoverArt( data.results[ albumArray[ i ] ].cover_art )
@@ -47,4 +49,7 @@ function chooseTracks() {
     $( 'main' ).empty()
     $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
     $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
+    for ( let i = 0; i < data.results.length; i++ ) {
+        $( '.trackListBin' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile'>` )
+    }
 }
