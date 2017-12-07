@@ -50,7 +50,7 @@ function chooseTracks() {
     $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
     $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'></div><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
     for ( let i = 0; i < data.results.length; i++ ) {
-        $( '.mainTrackList' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile' id='${data.results[ i ].title}' >` )
+        $( '.mainTrackList' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile' id='${[i]}' >` )
     }
     $( 'main' ).css( 'padding', '4em' )
     $( 'button' ).css( 'margin-left', '3em' )
@@ -58,7 +58,7 @@ function chooseTracks() {
     $( '.trackListTile' ).click( function () {
         $( '.trackListTile' ).css( 'border', 'none' )
         $( this ).css( 'border', '3px solid skyblue' )
-        $( '.trackListBin' ).append( `<p>${this.id}</p>` )
+        $( '.trackListBin' ).append( `<p>${data.results[this.id].artist}: ${data.results[this.id].title}</p>` )
     } )
     $( '#clearTracks' ).click( function () {
         $( '.trackListBin' ).empty()
