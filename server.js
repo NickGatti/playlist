@@ -59,6 +59,22 @@ router.get( '/', function ( req, res ) {
                 'Like Suicide',
                 'She Likes Suprises'
               ]
+            }, {
+                artist: 'Tool',
+                album: 'Undertow',
+                cover: './images/tool.jpeg',
+                tracklist: [
+                  'Intolerance',
+                  'Prison Sex',
+                  'Sober',
+                  'Bottom',
+                  'Crawl Away',
+                  'Swamp Song',
+                  'Undertow',
+                  '4 degrees',
+                  'Flood',
+                  'Silence'
+                ]
             }
     ]
     } );
