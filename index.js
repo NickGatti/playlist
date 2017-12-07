@@ -55,12 +55,22 @@ function chooseTracks() {
     $( 'main' ).css( 'padding', '4em' )
     $( 'button' ).css( 'margin-left', '3em' )
     $( 'main' ).css( 'min-height', '86vh' )
+
+    let postObj = {}
     $( '.trackListTile' ).click( function () {
         $( '.trackListTile' ).css( 'border', 'none' )
         $( this ).css( 'border', '3px solid skyblue' )
         $( '.trackListBin' ).append( `<p>${data.results[this.id].artist}: ${data.results[this.id].title}</p>` )
+        postObj[ data.results[ this.id ].artist ] = data.results[ this.id ].title
     } )
     $( '#clearTracks' ).click( function () {
         $( '.trackListBin' ).empty()
     } )
+    $( '#submitBin' ).click( function () {
+        $.post( 'https://lit-fortress-6467.herokuapp.com/post', postObj ).done( function ( data ) {
+            $( '.trackListBin' ).empty()
+            $( '.trackListBin' ).append( `<p>${data}</p>` )
+        } )
+    } )
+
 }
