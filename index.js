@@ -50,6 +50,6 @@ function chooseTracks() {
     $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
     $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
     for ( let i = 0; i < data.results.length; i++ ) {
-        $( '.trackListBin' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile'>` )
+        $( '.mainTrackList' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile'>` )
     }
 }
