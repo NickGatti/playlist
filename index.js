@@ -60,4 +60,7 @@ function chooseTracks() {
         $( this ).css( 'border', '3px solid skyblue' )
         $( '.trackListBin' ).append( `<p>${this.id}</p>` )
     } )
+    $( '#clearTracks' ).click( function () {
+        $( '.trackListBin' ).empty()
+    } )
 }
