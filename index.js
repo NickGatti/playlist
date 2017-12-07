@@ -1,9 +1,18 @@
 window.addEventListener( 'load', function () {
-    function randomNumber() {
-        return Math.floor( Math.random() * 5 )
-    }
+    let xhr = new XMLHttpRequest()
 
-    let displayAlbums = []
+    xhr.addEventListener( 'load', selectFirstThreeAlbums )
+
+    xhr.open( 'GET', 'https://lit-fortress-6467.herokuapp.com/object' )
+    xhr.send()
+} )
+
+function randomNumber() {
+    return Math.floor( Math.random() * 5 )
+}
+
+function randomNumbersInArray() {
+    let output = []
     let generator
     let pass
 
@@ -17,17 +26,8 @@ window.addEventListener( 'load', function () {
         }
         if ( pass ) displayAlbums.push( generator )
     }
-
-    let xhr = new XMLHttpRequest()
-
-    xhr.addEventListener( 'load', selectFirstThreeAlbums )
-
-    xhr.open( 'GET', 'https://lit-fortress-6467.herokuapp.com/object' )
-    xhr.send()
-
-
-
-} )
+    return output
+}
 
 function selectFirstThreeAlbums() {
     console.log( JSON.parse( this.responseText ) );
