@@ -16,19 +16,29 @@ function randomNumbersInArray() {
     let generator
     let pass
 
-    while ( displayAlbums.length != 3 ) {
+    while ( output.length != 3 ) {
         generator = randomNumber()
         pass = true
-        for ( let i = 0; i < displayAlbums.length; i++ ) {
-            if ( generator === displayAlbums[ i ] ) {
+        for ( let i = 0; i < output.length; i++ ) {
+            if ( generator === output[ i ] ) {
                 pass = false
             }
         }
-        if ( pass ) displayAlbums.push( generator )
+        if ( pass ) output.push( generator )
     }
     return output
 }
 
 function selectFirstThreeAlbums() {
-    console.log( JSON.parse( this.responseText ) );
+    let data = JSON.parse( this.responseText )
+    let albumArray = randomNumbersInArray()
+    for ( let i = 0; i < albumArray.length; i++ ) {
+        addCoverArt( data.results[ i ].cover_art )
+    }
+}
+
+function addCoverArt( argSrc ) {
+    let node = document.createElement( 'img' )
+    node.src = './images/' + argSrc
+    document.querySelector( '.selectList' ).appendChild( node )
 }
