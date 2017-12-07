@@ -5,6 +5,8 @@ window.addEventListener( 'load', function () {
 
     xhr.open( 'GET', 'https://lit-fortress-6467.herokuapp.com/object' )
     xhr.send()
+
+    $( '#chooseTracks' ).click( chooseTracks )
 } )
 
 function randomNumber() {
@@ -38,8 +40,11 @@ function selectFirstThreeAlbums() {
 }
 
 function addCoverArt( argSrc ) {
-    // let node = document.createElement( 'img' )
-    // node.src = './images/' + argSrc
-    // document.querySelector( '.selectList' ).appendChild( node )
     $( '.selectList' ).append( `<img class='coverArt' src='./images/${argSrc}'>` )
+}
+
+function chooseTracks() {
+    $( 'main' ).empty()
+    $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
+    $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
 }
