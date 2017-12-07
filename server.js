@@ -20,6 +20,7 @@ router.get( '/', function ( req, res ) {
     res.json( {
         results: [
             {
+                id: 0,
                 artist: 'Rage Against The Machine',
                 album: 'Evil Empire',
                 cover: './images/rage.jpeg',
@@ -38,6 +39,7 @@ router.get( '/', function ( req, res ) {
               ]
             },
             {
+                id: 1,
                 artist: 'Sound Garden',
                 album: 'Superunknown',
                 cover: './images/garden.jpeg',
@@ -60,6 +62,7 @@ router.get( '/', function ( req, res ) {
                 'She Likes Suprises'
               ]
             }, {
+                id: 2,
                 artist: 'Tool',
                 album: 'Undertow',
                 cover: './images/tool.jpeg',
