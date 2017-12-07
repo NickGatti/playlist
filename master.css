@@ -97,8 +97,11 @@ footer {
     border: 3px solid black;
     border-radius: 15px;
     background-color: grey;
-    padding: 3em;
+    padding: 0.5em;
     height: 200px;
     width: 400px;
     margin: 1em 1em 1em 3em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
