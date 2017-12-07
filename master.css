@@ -56,6 +56,16 @@ footer {
     padding-top: 1em;
 }
 
+.backgroundImgDiv {
+    position: absolute;
+}
+
+.backgroundImg {
+    height: 82vh;
+    width: 100%;
+    opacity: 0.19;
+}
+
 .copy {
     margin-left: 4em;
     transform: translateY(50%);
