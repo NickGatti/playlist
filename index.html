@@ -20,20 +20,20 @@
 
             header {
                 width: 100%;
-                background: black;
+                background: silver;
                 height: 5vh;
             }
 
             main {
                 width: 100%;
-                background: lightgrey;
+                background: white;
                 height: 88.25vh;
                 border: 1px solid black;
             }
 
             footer {
                 width: 100%;
-                background: black;
+                background: silver;
                 height: 5vh;
             }
 
@@ -42,6 +42,9 @@
                 width: 50%;
                 border: 1px solid black;
                 float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .selectList {
@@ -49,6 +52,23 @@
                 border: 1px solid black;
                 min-height: 100%;
                 float: right;
+            }
+
+            .copy {
+                margin-left: 4em;
+                transform: translateY(50%);
+            }
+
+            .trackBinCont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #chooseTracks {
+                background: darkgrey;
+                padding: 1em;
             }
         </style>
     </head>
@@ -58,16 +78,28 @@
         </header>
         <main>
             <aside class="trackBin">
+                <div class="trackBinCont">
+                    <div>
+                        Track Bin
+                    </div>
+                    <div>
+                        <button id="chooseTracks" type="button" name="button">Choose Tracks</button>
+                    </div>
 
+                </div>
             </aside>
             <aside class="selectList">
 
             </aside>
         </main>
         <footer>
+            <div class="copy">
+                &copy; Nick Gatti
+            </div>
         </footer>
 
-
+        <script type="text/javascript" src="index.js">
+        </script>
     </body>
 
 </html>
