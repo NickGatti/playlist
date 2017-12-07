@@ -18,11 +18,11 @@ var router = express.Router(); // get an instance of the express Router
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get( '/', function ( req, res ) {
     res.json( {
-        response: [
+        results: [
             {
                 artist: 'Rage Against The Machine',
                 album: 'Evil Empire',
-                cover: './images/rageagainstthemachine.jepg',
+                cover: './images/rage.jpeg',
                 tracklist: [
                 'People of the Sun',
                 'Bulls on Parade',
@@ -40,7 +40,7 @@ router.get( '/', function ( req, res ) {
             {
                 artist: 'Sound Garden',
                 album: 'Superunknown',
-                cover: './images/soundgarden.jpeg',
+                cover: './images/garden.jpeg',
                 tracklist: [
                 'Let Me Down',
                 'My Wave',

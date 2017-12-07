@@ -5,23 +5,23 @@ window.addEventListener( 'load', function () {
 
     xhr.addEventListener( 'load', selectFirstThreeAlbums )
 
-    xhr.open( 'GET', 'https://lit-fortress-6467.herokuapp.com/object' )
+    xhr.open( 'GET', 'http://localhost:3000/api' )
     xhr.send()
 
     $( '#chooseTracks' ).click( chooseTracks )
 } )
 
-function randomNumber() {
-    return Math.floor( Math.random() * 5 )
+function randomNumber( maxSize ) {
+    return Math.floor( Math.random() * maxSize )
 }
 
-function randomNumbersInArray() {
+function randomNumbersInArray( maxSize ) {
     let output = []
     let generator
     let pass
 
     while ( output.length != 3 ) {
-        generator = randomNumber()
+        generator = randomNumber( maxSize )
         pass = true
         for ( let i = 0; i < output.length; i++ ) {
             if ( generator === output[ i ] ) {
@@ -35,14 +35,15 @@ function randomNumbersInArray() {
 
 function selectFirstThreeAlbums() {
     data = JSON.parse( this.responseText )
-    let albumArray = randomNumbersInArray()
+    let albumArray = randomNumbersInArray( data.results.length )
+    console.log( data );
     for ( let i = 0; i < albumArray.length; i++ ) {
-        addCoverArt( data.results[ albumArray[ i ] ].cover_art )
+        addCoverArt( data.results[ albumArray[ i ] ].cover )
     }
 }
 
 function addCoverArt( argSrc ) {
-    $( '.selectList' ).append( `<img class='coverArt' src='./images/${argSrc}'>` )
+    $( '.selectList' ).append( `<img class='coverArt' src='${argSrc}'>` )
 }
 
 function chooseTracks() {
@@ -50,7 +51,7 @@ function chooseTracks() {
     $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
     $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'></div><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
     for ( let i = 0; i < data.results.length; i++ ) {
-        $( '.mainTrackList' ).append( `<img src='images/${data.results[i].cover_art}' class='trackListTile' id='${[i]}' >` )
+        $( '.mainTrackList' ).append( `<img src='images/${data.results[i].cover}' class='trackListTile' id='${[i]}' >` )
     }
     $( 'main' ).css( 'padding', '4em' )
     $( 'button' ).css( 'margin-left', '3em' )
