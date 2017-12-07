@@ -33,12 +33,13 @@ function selectFirstThreeAlbums() {
     let data = JSON.parse( this.responseText )
     let albumArray = randomNumbersInArray()
     for ( let i = 0; i < albumArray.length; i++ ) {
-        addCoverArt( data.results[ i ].cover_art )
+        addCoverArt( data.results[ albumArray[ i ] ].cover_art )
     }
 }
 
 function addCoverArt( argSrc ) {
-    let node = document.createElement( 'img' )
-    node.src = './images/' + argSrc
-    document.querySelector( '.selectList' ).appendChild( node )
+    // let node = document.createElement( 'img' )
+    // node.src = './images/' + argSrc
+    // document.querySelector( '.selectList' ).appendChild( node )
+    $( '.selectList' ).append( `<img class='coverArt' src='./images/${argSrc}'>` )
 }

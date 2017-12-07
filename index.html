@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" href="./master.css">
         <style media="screen">
@@ -20,6 +21,11 @@
                 box-sizing: inherit;
             }
 
+            #wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
             header {
                 width: 100%;
                 background: silver;
@@ -28,9 +34,9 @@
 
             main {
                 width: 100%;
+                max-height: 88vh;
                 background: white;
-                height: 88.25vh;
-                border: 1px solid black;
+                overflow: auto;
             }
 
             footer {
@@ -40,20 +46,23 @@
             }
 
             .trackBin {
-                min-height: 100%;
                 width: 50%;
-                border: 1px solid black;
+                min-height: 86vh;
+                max-height: 86vh;
                 float: left;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                overflow: auto;
             }
 
             .selectList {
                 width: 50%;
-                border: 1px solid black;
+                max-height: 86vh;
                 min-height: 100%;
                 float: right;
+                object-fit: contain;
+                overflow: auto;
             }
 
             .copy {
@@ -73,33 +82,39 @@
                 padding: 1em;
                 margin: 1em;
             }
+
+            .coverArt {
+                width: 50%;
+            }
         </style>
     </head>
 
     <body>
-        <header>
-        </header>
-        <main>
-            <aside class="trackBin">
-                <div class="trackBinCont">
-                    <div>
-                        <h1>Track Bin</h1>
-                    </div>
-                    <div>
-                        <button id="chooseTracks" type="button" name="button">Choose Tracks</button>
-                    </div>
+        <div id="wrapper">
+            <header>
+            </header>
+            <main>
+                <aside class="trackBin">
+                    <div class="trackBinCont">
+                        <div>
+                            <h1>Track Bin</h1>
+                        </div>
+                        <div>
+                            <button id="chooseTracks" type="button" name="button">Choose Tracks</button>
+                        </div>
 
+                    </div>
+                </aside>
+                <aside class="selectList">
+                </aside>
+            </main>
+            <footer>
+                <div class="copy">
+                    &copy; Nick Gatti
                 </div>
-            </aside>
-            <aside class="selectList">
+            </footer>
 
-            </aside>
-        </main>
-        <footer>
-            <div class="copy">
-                &copy; Nick Gatti
-            </div>
-        </footer>
+        </div>
 
         <script type="text/javascript" src="index.js">
         </script>
