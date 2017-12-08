@@ -42,7 +42,7 @@ function selectFirstThreeAlbums() {
 }
 
 function addCoverArt( argSrc ) {
-    $( '.selectList' ).append( `<img class='coverArt' src='${argSrc}'>` )
+    $( '.selectListCont' ).append( `<img class='coverArt' src='${argSrc}'>` )
 }
 
 function chooseTracks() {
