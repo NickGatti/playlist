@@ -236,7 +236,28 @@ router.get( '/', function ( req, res ) {
                 'Farewell and Goodnight'
               ]
             },
-
+            {
+                id: 10,
+                artist: 'Green Day',
+                album: 'Dookie',
+                cover: './images/green.jpeg',
+                tracklist: [
+                'Burnout',
+                'Having a Blast',
+                'Chump',
+                'Longview',
+                'Welcome to Paradise',
+                'Pullng Teeth',
+                'Basket Case',
+                'She',
+                'Sassafras Roots',
+                'When I Come Around',
+                'Coming Clean',
+                'Enemius Sleepus',
+                'In The End',
+                'F.O.D / All by Myself'
+              ]
+            }
     ]
     } );
 } );
