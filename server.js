@@ -161,7 +161,82 @@ router.get( '/', function ( req, res ) {
                 'Angry Chair',
                 'Would?'
               ]
-            }
+            },
+            {
+                id: 7,
+                artist: 'Pearl Jam',
+                album: 'Ten',
+                cover: './images/pearl.jpeg',
+                tracklist: [
+                'Once',
+                'Evenflow',
+                'Alive',
+                'Why Go',
+                'Black',
+                'Jeremy',
+                'Oceans',
+                'Pouch',
+                'Garden',
+                'Deep',
+                'Release'
+              ]
+            },
+            {
+                id: 8,
+                artist: 'Radio Head',
+                album: 'OK Computer',
+                cover: './images/radiohead.jpeg',
+                tracklist: [
+                'Airbag',
+                'Paranoid Andriod',
+                'Subterranean Homesick Allen',
+                'Exit Music (For a Film)',
+                'Let Down',
+                'Karma Police',
+                'Fitter Happier',
+                'Electioneering',
+                'Climbing Up the Walls',
+                'No Surprises',
+                'Lucky',
+                'The Tourist'
+              ]
+            },
+            {
+                id: 9,
+                artist: 'Smashing Pumpkins',
+                album: 'Mellon Collie and the Infinite Sadness',
+                cover: './images/pumpkins.jpeg',
+                tracklist: [
+                'Mellon Collie and the Infinite Sadness',
+                'Tonight, Tonight',
+                'Jellybelly',
+                'Zero',
+                'Here is No Why',
+                'Bullet With Butterfly Wings',
+                'To Forgive',
+                'Fuck You (and an Ode to No One)',
+                'Love',
+                'Cupid de Locke',
+                'Galapogos',
+                'Muzzle',
+                'Porcellina of the Vast Oceans',
+                'Take Me Down',
+                'Where Boys Fear to Tread',
+                'Bodies',
+                'Thirty Three',
+                '1979',
+                'Tales of the Scorched Earth',
+                'Thru the Eyes of a Ruby',
+                'Stumbline',
+                'X.Y.U.',
+                'We Only Come Out At Night',
+                'Beautiful',
+                'Lily (My One and Only)',
+                'By Starlight',
+                'Farewell and Goodnight'
+              ]
+            },
+
     ]
     } );
 } );
