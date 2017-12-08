@@ -56,8 +56,11 @@ function chooseTracks() {
     $( 'button' ).css( 'margin-left', '3em' )
     $( 'main' ).css( 'min-height', '86vh' )
 
+
     let postObj = {}
+    let tileClicked
     $( '.trackListTile' ).click( function () {
+        tileClicked = this.id
         $( '.trackListTile' ).css( 'border', 'none' )
         $( this ).css( 'border', '3px solid skyblue' )
         $( '.trackListBin' ).append( `<p>${data.results[this.id].artist}: ${data.results[this.id].album}</p>` )
@@ -66,10 +69,16 @@ function chooseTracks() {
     $( '#clearTracks' ).click( function () {
         $( '.trackListBin' ).empty()
     } )
-    $( '#submitBin' ).click( function () {
+    $( '#submitBin' ).click( () => {
         $.post( 'https://lit-fortress-6467.herokuapp.com/post', postObj ).done( function ( data ) {
             $( '.trackListBin' ).empty()
             $( '.trackListBin' ).append( `<p>${data}</p>` )
         } )
+    } )
+    $( '#getSongs' ).click( () => {
+        $( '.songListBin' ).empty()
+        for ( let i = 0; i < data.results[ tileClicked ].tracklist.length; i++ ) {
+            $( '.songListBin' ).append( `<p>${data.results[ tileClicked ].tracklist[i]}</p>` )
+        }
     } )
 }
