@@ -18,6 +18,8 @@ header {
     width: 100%;
     background: silver;
     height: 5vh;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 2px solid grey;
 }
 
 main {
@@ -31,8 +33,10 @@ main {
 
 footer {
     width: 100%;
-    background: silver;
+    background: grey;
     height: 5vh;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 2px solid dimgrey;
 }
 
 .trackBin {
@@ -86,9 +90,18 @@ footer {
 }
 
 .buttonStyle {
-    background: darkgrey;
-    padding: 1em;
+    background: dimgrey;
+    color: gainsboro;
+    padding: 0.85em;
     margin: 1em;
+    font-size: 130%;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    border: 2px solid black;
+}
+
+button:hover {
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    transform: translateY(-2.75%) translateX(-2%);
 }
 
 .coverArt {
