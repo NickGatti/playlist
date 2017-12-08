@@ -78,8 +78,15 @@ function chooseTracks() {
     } )
     $( '#getSongs' ).click( () => {
         $( '.songListBin' ).empty()
-        for ( let i = 0; i < data.results[ tileClicked ].tracklist.length; i++ ) {
-            $( '.songListBin' ).append( `<p>${data.results[ tileClicked ].tracklist[i]}</p>` )
+        for ( let key in postObj ) {
+            $( '.songListBin' ).append( `<p>Artist: ${key}</p>` )
+            for ( let i = 0; i < data.results.length; i++ ) {
+                if ( key === data.results[ i ].artist ) {
+                    for ( let z = 0; z < data.results[ i ].tracklist.length; z++ ) {
+                        $( '.songListBin' ).append( `<p>${data.results[i].tracklist[z]}</p>` )
+                    }
+                }
+            }
         }
     } )
 }
