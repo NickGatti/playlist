@@ -115,6 +115,7 @@ footer {
     overflow-x: hidden;
     overflow-y: scroll;
     float: left;
+    margin-left: 11em;
 }
 
 .songListBin {
@@ -129,4 +130,9 @@ footer {
     overflow-x: hidden;
     overflow-y: scroll;
     float: right;
+    margin-right: 11em;
+}
+
+.btnDiv {
+    clear: both;
 }
