@@ -41,6 +41,7 @@ footer {
     align-items: center;
     justify-content: center;
     overflow: auto;
+    min-height: 88vh;
 }
 
 .selectList {
@@ -51,6 +52,7 @@ footer {
     align-items: center;
     padding-top: 1em;
     padding-bottom: 1em;
+    min-height: 88vh;
 }
 
 .selectListCont {
@@ -90,8 +92,8 @@ footer {
 }
 
 .coverArt {
-    max-height: 37vh;
-    width: 50%;
+    width: 15vw;
+    height: 15vw;
 }
 
 .mainTrackList {
