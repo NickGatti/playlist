@@ -120,8 +120,6 @@ footer {
     overflow: auto;
     overflow-x: hidden;
     overflow-y: scroll;
-    float: left;
-    margin-left: 11em;
 }
 
 .songListBin {
@@ -135,10 +133,13 @@ footer {
     overflow: auto;
     overflow-x: hidden;
     overflow-y: scroll;
-    float: right;
-    margin-right: 11em;
 }
 
 .btnDiv {
     clear: both;
+}
+
+.binContainer {
+    display: flex;
+    flex-flow: row;
 }
