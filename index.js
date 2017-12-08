@@ -79,7 +79,7 @@ function chooseTracks() {
     $( '#getSongs' ).click( () => {
         $( '.songListBin' ).empty()
         for ( let key in postObj ) {
-            $( '.songListBin' ).append( `<p>Artist: ${key}</p>` )
+            $( '.songListBin' ).append( `<h3>Artist: ${key}</h3>` )
             for ( let i = 0; i < data.results.length; i++ ) {
                 if ( key === data.results[ i ].artist ) {
                     for ( let z = 0; z < data.results[ i ].tracklist.length; z++ ) {

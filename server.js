@@ -78,6 +78,89 @@ router.get( '/', function ( req, res ) {
                   'Flood',
                   'Silence'
                 ]
+            },
+            {
+                id: 3,
+                artist: 'Live',
+                album: 'Throwing Copper',
+                cover: './images/live.jpeg',
+                tracklist: [
+                'The Dam at Otter Creek',
+                'Selling The Drama',
+                'I Alone',
+                'Iris',
+                'Lightning Crashes',
+                'Top',
+                'All Over You',
+                'Shit Towne',
+                'T.B.D.',
+                'Stage',
+                'Waitress',
+                'Pillar of Davidson',
+                'White,Discussion',
+                'Horse'
+              ]
+            },
+            {
+                id: 4,
+                artist: 'Nirvana',
+                album: 'Nevermind',
+                cover: './images/nirvana.jpeg',
+                tracklist: [
+                'Smells Like Teen Spirit',
+                'In Bloom',
+                'Come as You Are',
+                'Breed',
+                'Lthium',
+                'Polly',
+                'Territorial Pissings',
+                'Drain You',
+                'Loung Act',
+                'Stay Away',
+                'On a Plain',
+                'Something in the Way'
+              ]
+            },
+            {
+                id: 5,
+                artist: 'Stone Temple Pilots',
+                album: 'Core',
+                cover: './images/stp.jpeg',
+                tracklist: [
+                'Dead and Bloated',
+                'Sex Type Thing',
+                'Wicked Garden',
+                'No Memory',
+                'Sin',
+                'Naked Sunday',
+                'Creep',
+                'Piece of Pie',
+                'Plush',
+                'Wet My Bed',
+                'Cracker Man',
+                'Where the River Goes'
+              ]
+            },
+            {
+                id: 6,
+                artist: 'Alice in Chains',
+                album: 'Dirt',
+                cover: 'images/alice.jpeg',
+                tracklist: [
+                'Them Bones',
+                'Dam the River',
+                'Rain Where I Die',
+                'Down in a Hole',
+                'Stick Man',
+                'Rooster',
+                'Junkhead',
+                'Dirt',
+                'God Smack',
+                'Iron Gland',
+                'Hate to Feel',
+                'Angry Chair',
+                'Would?'
+              ]
             }
     ]
     } );
