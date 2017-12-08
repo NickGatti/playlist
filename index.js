@@ -48,7 +48,7 @@ function addCoverArt( argSrc ) {
 function chooseTracks() {
     $( 'main' ).empty()
     $( 'header' ).append( '<div class="copy">Click on an album to add its tracks</div>' )
-    $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'></div><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button>" )
+    $( 'main' ).append( "<div class='mainTrackList'></div><div class='trackListBin'></div><div class='songListBin'></div><button id='clearTracks' class='buttonStyle' type='button' name='button'>Clear Tracks</button><button id='submitBin' class='buttonStyle' type='button' name='button'>Submit Bin</button><button id='getSongs' class='buttonStyle' type='button' name='button'>Get Songs</button>" )
     for ( let i = 0; i < data.results.length; i++ ) {
         $( '.mainTrackList' ).append( `<img src='${data.results[i].cover}' class='trackListTile' id='${[i]}' >` )
     }
@@ -72,5 +72,4 @@ function chooseTracks() {
             $( '.trackListBin' ).append( `<p>${data}</p>` )
         } )
     } )
-
 }
