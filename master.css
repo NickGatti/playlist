@@ -114,6 +114,7 @@ button:hover {
 .mainTrackListCont {
     height: 185px;
     overflow: scroll;
+    overflow-y: hidden;
 }
 
 .mainTrackList {
@@ -121,7 +122,6 @@ button:hover {
     width: 215%;
     height: 185px;
     margin: 1em;
-    overflow: auto;
 }
 
 .trackListTile {
@@ -147,8 +147,6 @@ button:hover {
     width: 400px;
     margin: 1em 1em 1em 3em;
     overflow: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     border: 2px solid black;
 }
@@ -162,8 +160,6 @@ button:hover {
     width: 400px;
     margin: 1em 1em 1em 3em;
     overflow: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     border: 2px solid black;
 }
